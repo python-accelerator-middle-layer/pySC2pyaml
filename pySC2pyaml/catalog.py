@@ -87,12 +87,12 @@ class pySCCatalog(ACatalog, DynamicValidation):
             attr_path = key
             index = None
 
-        parts = attr_path.split("/")
-        if len(parts) != 3 or any(part == "" for part in parts):
-            raise PyAMLException(
-                f"pySC catalog cannot resolve invalid pySC address "
-                f"reference '{key}'. Expected 'server/location/property' or "
-                f"'server/location/property@index'."
-            )
+        # parts = attr_path.split("/")
+        # if len(parts) != 3 or any(part == "" for part in parts):
+        #     raise PyAMLException(
+        #         f"pySC catalog cannot resolve invalid pySC address "
+        #         f"reference '{key}'. Expected 'server/location/property' or "
+        #         f"'server/location/property@index'."
+        #     )
 
         return attr_path, index
